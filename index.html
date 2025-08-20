@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <title>Forever Floral Sisters | Fresh Flowers Delivered</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Forever Floral Sisters in Cardiff. Fresh bouquets, wedding florals, and weekly corporate flowers. Same day delivery in CF postcodes. Open Mon to Sat, 9 to 5.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'>
+      <rect width='64' height='64' rx='12' ry='12' fill='%23fff8fb'/>
+      <circle cx='32' cy='24' r='10' fill='%23C43D4D'/>
+      <circle cx='22' cy='32' r='8' fill='%23E85C6B'/>
+      <circle cx='42' cy='32' r='8' fill='%23E85C6B'/>
+      <rect x='30' y='34' width='4' height='18' fill='%232E7D32'/>
+      <path d='M32 42 C20 44,20 58,32 52 C44 58,44 44,32 42 Z' fill='%232E7D32'/>
+    </svg>">
+  <style>
+    :root{
+      --rose:#C43D4D; --rose-2:#E85C6B; --leaf:#2E7D32; --ink:#1f2328; --muted:#66707b; --bg:#fff8fb; --panel:#ffffff; --line:#e5e7eb;
+      --radius:14px; --pad:14px; --gap:16px; --shadow:0 8px 24px rgba(16,24,40,0.08);
+    }
+    @media (prefers-color-scheme: dark){
+      :root{ --bg:#111317; --panel:#171a1f; --ink:#e6e8ea; --muted:#9aa3ab; --line:#2a2f36; }
+    }
+    html,body{height:100%}
+    body{
+      margin:0; background:var(--bg); color:var(--ink); font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+      text-rendering:optimizeLegibility; -webkit-font-smoothing:antialiased;
+    }
+    a{color:var(--rose); text-decoration:none}
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible{outline:3px solid var(--rose-2); outline-offset:2px; border-radius:8px}
+    .container{max-width:1200px; margin:0 auto; padding:0 16px}
+    .skip-link{position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden}
+    .skip-link:focus{position:fixed; left:16px; top:16px; z-index:1000; width:auto; height:auto; padding:8px 12px; background:var(--panel); border:1px solid var(--line); border-radius:10px; box-shadow:var(--shadow)}
+    /* Header */
+    header{position:sticky; top:0; z-index:50; backdrop-filter:saturate(140%) blur(8px); background:color-mix(in oklab, var(--bg) 85%, transparent); border-bottom:1px solid var(--line)}
+    .top{display:flex; align-items:center; justify-content:space-between; height:64px}
+    .brand{display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.2px}
+    .brand-mark{width:32px; height:32px; border-radius:10px; background:
+      radial-gradient(35% 35% at 35% 35%, var(--rose) 0 70%, transparent 71%),
+      radial-gradient(35% 35% at 65% 35%, var(--rose-2) 0 70%, transparent 71%),
+      radial-gradient(50% 60% at 50% 75%, var(--leaf) 0 70%, transparent 71%),
+      var(--panel); border:1px solid var(--line)}
+    nav ul{display:flex; gap:14px; align-items:center; margin:0; padding:0; list-style:none}
+    nav a{padding:8px 10px; border-radius:10px}
+    nav a:hover{background:var(--panel); box-shadow:var(--shadow)}
+    .actions{display:flex; align-items:center; gap:8px}
+    .btn, .btn-ghost{
+      border:1px solid var(--line); background:var(--panel); color:var(--ink); border-radius:12px; padding:10px 14px; cursor:pointer
+    }
+    .btn{background:linear-gradient(180deg, var(--rose-2), var(--rose)); color:#fff; border:0}
+    .btn:disabled{opacity:.6; cursor:not-allowed}
+    .icon-btn{border:1px solid var(--line); background:var(--panel); padding:8px; border-radius:12px; cursor:pointer}
+    .menu-toggle{display:none}
+    @media (max-width:900px){
+      nav{display:none}
+      .menu-toggle{display:inline-flex}
+    }
+    /* Hero */
+    .hero{padding:32px 0 20px}
+    .hero-card{display:grid; grid-template-columns: 1.1fr 1fr; gap:20px; background:var(--panel); border:1px solid var(--line); border-radius:20px; box-shadow:var(--shadow); overflow:hidden}
+    .hero-copy{padding:22px}
+    .eyebrow{color:var(--rose); font-weight:700; letter-spacing:.3px; text-transform:uppercase; font-size:12px}
+    .hero h1{margin:.4rem 0 0.6rem; font-size:clamp(26px,5vw,40px); line-height:1.1}
+    .hero p{color:var(--muted); margin:0 0 1rem}
+    .hero-cta{display:flex; gap:10px; flex-wrap:wrap}
+    .hero-media{position:relative; min-height:280px; background:linear-gradient(120deg, #ffe6ee, #fff8fb)}
+    .media-wrap{position:relative; padding:16px; height:100%}
+    .hero-img{display:block; width:100%; height:auto; border-radius:12px; box-shadow:var(--shadow)}
+    /* Sections */
+    section{padding:36px 0}
+    h2{font-size:clamp(22px,3.6vw,30px); margin:0 0 12px}
+    .muted{color:var(--muted)}
+    .panel{background:var(--panel); border:1px solid var(--line); border-radius:16px; box-shadow:var(--shadow)}
+    /* Shop grid */
+    .grid{display:grid; grid-template-columns: repeat(12, 1fr); gap:16px}
+    .col-12{grid-column: span 12}
+    .col-6{grid-column: span 6}
+    .col-4{grid-column: span 4}
+    @media (max-width:900px){ .col-6{grid-column: span 12} .col-4{grid-column: span 6} }
+    @media (max-width:600px){ .col-4{grid-column: span 12} }
+    .card{display:flex; flex-direction:column; gap:12px; padding:12px}
+    .img-frame{position:relative; width:100%; aspect-ratio:4/3; overflow:hidden; border-radius:12px; border:1px solid var(--line); background:#fafafa}
+    .img-frame img{max-width:100%; height:auto; display:block; border-radius:12px}
+    .price{font-weight:700}
+    .qty-row{display:flex; gap:8px; align-items:center}
+    .qty{width:72px}
+    /* Weddings steps */
+    .steps{display:grid; grid-template-columns:repeat(3, 1fr); gap:16px}
+    .step{padding:14px}
+    @media (max-width:900px){ .steps{grid-template-columns:1fr} }
+    /* Delivery */
+    .delivery .row{display:grid; grid-template-columns:1.2fr 1fr; gap:16px}
+    @media (max-width:900px){ .delivery .row{grid-template-columns:1fr} }
+    /* About and FAQ */
+    blockquote{margin:0; padding:16px; background:var(--bg); border-left:4px solid var(--rose-2); border-radius:12px}
+    details{border:1px solid var(--line); border-radius:12px; padding:12px 14px; background:var(--panel)}
+    details+details{margin-top:10px}
+    summary{cursor:pointer; font-weight:600}
+    /* Footer */
+    footer{border-top:1px solid var(--line); padding:24px 0 40px; margin-top:24px}
+    .credits details{margin-top:10px}
+    /* Drawer cart */
+    .overlay{position:fixed; inset:0; background:rgba(0,0,0,.4); display:none}
+    .overlay.show{display:block}
+    .drawer{position:fixed; top:0; right:0; width:min(420px, 100%); height:100%; background:var(--panel); border-left:1px solid var(--line); box-shadow:var(--shadow); transform:translateX(100%); transition:.25s ease; display:flex; flex-direction:column}
+    .drawer.show{transform:none}
+    .drawer header{position:sticky; top:0; background:var(--panel); border-bottom:1px solid var(--line)}
+    .drawer h3{margin:0}
+    .drawer .content{padding:14px; overflow:auto; flex:1}
+    .line{display:flex; align-items:center; justify-content:space-between; gap:10px; padding:10px 0; border-bottom:1px dashed var(--line)}
+    .line:last-child{border-bottom:0}
+    .basket-live{position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden}
+    /* Toast */
+    .toast{position:fixed; bottom:16px; left:50%; transform:translateX(-50%); background:var(--panel); border:1px solid var(--line); box-shadow:var(--shadow); border-radius:12px; padding:10px 14px; display:none}
+    .toast.show{display:block}
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header>
+    <div class="container top" role="navigation" aria-label="Primary">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <span>Forever Floral Sisters</span>
+      </div>
+      <nav aria-label="Site">
+        <ul>
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="#weddings">Weddings</a></li>
+          <li><a href="#delivery">Delivery</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="actions">
+        <button class="icon-btn menu-toggle" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <button class="icon-btn" id="openCartBtn" aria-haspopup="dialog" aria-controls="cartDrawer" aria-label="Open basket">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M6 6h15l-2 10H7L6 6Z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/>
+            <circle cx="9" cy="20" r="1.8" fill="currentColor"/><circle cx="17" cy="20" r="1.8" fill="currentColor"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="container" hidden>
+      <nav aria-label="Mobile">
+        <ul style="display:grid; gap:10px; padding:10px 0 14px; list-style:none; margin:0">
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="#weddings">Weddings</a></li>
+          <li><a href="#delivery">Delivery</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-card">
+          <div class="hero-copy">
+            <div class="eyebrow">Cardiff florists</div>
+            <h1>Fresh flowers delivered with care</h1>
+            <p>Hand tied bouquets, wedding florals, and weekly corporate arrangements. Same day delivery in CF postcodes when you order before 12:00.</p>
+            <div class="hero-cta">
+              <a class="btn" href="#shop">Shop bouquets</a>
+              <a class="btn-ghost" href="#weddings">Plan weddings</a>
+            </div>
+            <p class="muted" style="margin-top:10px">Open Mon to Sat, 9 to 5 · hello@foreverfloralsisters.co.uk</p>
+          </div>
+          <div class="hero-media">
+            <div class="media-wrap">
+              <img id="heroImg" class="hero-img" decoding="async" loading="lazy" width="1200" height="800" alt="Bouquet close up with soft bokeh" src="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shop -->
+    <section id="shop">
+      <div class="container">
+        <h2>Shop bouquets</h2>
+        <p class="muted">Photos are embedded for offline use. Prices include VAT. Delivery is calculated at checkout.</p>
+        <div class="grid" id="shopGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- Weddings -->
+    <section id="weddings">
+      <div class="container">
+        <h2>Weddings</h2>
+        <p class="muted">From trial bouquet to the big day. We keep things calm and organised.</p>
+        <div class="steps">
+          <div class="panel step">
+            <strong>1. Discovery</strong>
+            <p class="muted">Share your palette and venue. We guide options that suit season and budget.</p>
+          </div>
+          <div class="panel step">
+            <strong>2. Trial bouquet</strong>
+            <p class="muted">We build a sample so you can see scale and textures in real light.</p>
+          </div>
+          <div class="panel step">
+            <strong>3. Wedding day</strong>
+            <p class="muted">Delivery and setup on time. Pinning, placing, and last checks handled.</p>
+          </div>
+        </div>
+        <div class="grid" style="margin-top:16px">
+          <div class="col-4">
+            <div class="img-frame panel"><img id="decor1" decoding="async" loading="lazy" width="800" height="600" alt="Soft focus flowers decorative image" src=""></div>
+          </div>
+          <div class="col-4">
+            <div class="img-frame panel"><img id="decor2" decoding="async" loading="lazy" width="800" height="600" alt="Petals with natural light decorative image" src=""></div>
+          </div>
+          <div class="col-4">
+            <div class="img-frame panel"><img id="decor3" decoding="async" loading="lazy" width="800" height="600" alt="Bridal bouquet detail decorative image" src=""></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Delivery -->
+    <section id="delivery" class="delivery">
+      <div class="container">
+        <h2>Delivery</h2>
+        <div class="panel row" style="padding:16px">
+          <div>
+            <p>Same day delivery in Cardiff CF postcodes for orders placed before 12:00. Nearby areas delivered next day.</p>
+            <p class="muted">Standard delivery £4.95. Free delivery when basket reaches £60.</p>
+          </div>
+          <form id="pcForm" aria-label="Postcode helper">
+            <label for="pc">Check delivery info by postcode</label><br>
+            <input id="pc" name="pc" class="qty" placeholder="e.g. CF10" aria-describedby="pcHelp" />
+            <p id="pcHelp" class="muted" style="margin-top:8px">Enter your postcode prefix to see guidance.</p>
+            <div id="pcMsg" class="muted" aria-live="polite" style="margin-top:8px"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <h2>About</h2>
+        <div class="grid">
+          <div class="col-6">
+            <div class="panel" style="padding:16px">
+              <p>We are a small Cardiff studio focused on seasonal flowers, tidy stems, and honest service. Every bouquet is hand tied and delivered with care.</p>
+              <blockquote cite="#">
+                “Beautiful selection and real attention to detail. The bouquet lasted well over a week.”
+              </blockquote>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="panel" style="padding:16px">
+              <p>We support local growers where possible and choose sturdy, long lasting varieties for delivery. Corporate clients get consistent weekly refresh and tidy vases included.</p>
+              <blockquote cite="#">
+                “Our reception looks fresh every Monday. Simple process and dependable delivery.”
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="container">
+        <h2>FAQ</h2>
+        <details>
+          <summary>Can I request a specific flower</summary>
+          <p>Yes if it is in season and available. Add a note at checkout. We will confirm substitutes if needed.</p>
+        </details>
+        <details>
+          <summary>How long do bouquets last</summary>
+          <p>Typically 5 to 7 days. Trim stems on arrival, use clean water, and keep away from direct heat.</p>
+        </details>
+        <details>
+          <summary>Do you deliver outside Cardiff</summary>
+          <p>We deliver nearby areas next day. Use the postcode helper for a quick check and contact us for other areas.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <div class="grid">
+          <div class="col-6">
+            <form id="contactForm" class="panel" style="padding:16px">
+              <div>
+                <label for="name">Name</label><br>
+                <input id="name" name="name" required style="width:100%; padding:10px; border:1px solid var(--line); border-radius:12px; background:var(--bg)">
+              </div>
+              <div style="margin-top:10px">
+                <label for="email">Email</label><br>
+                <input id="email" name="email" type="email" required style="width:100%; padding:10px; border:1px solid var(--line); border-radius:12px; background:var(--bg)">
+              </div>
+              <div style="margin-top:10px">
+                <label for="msg">Message</label><br>
+                <textarea id="msg" name="msg" rows="5" required style="width:100%; padding:10px; border:1px solid var(--line); border-radius:12px; background:var(--bg)"></textarea>
+              </div>
+              <div style="margin-top:12px; display:flex; gap:8px; align-items:center">
+                <button class="btn" type="submit">Send</button>
+                <span id="contactStatus" class="muted" aria-live="polite"></span>
+              </div>
+            </form>
+          </div>
+          <div class="col-6">
+            <form id="newsForm" class="panel" style="padding:16px">
+              <label for="newsEmail">Newsletter</label><br>
+              <input id="newsEmail" name="newsEmail" type="email" placeholder="you@example.com" required style="width:100%; padding:10px; border:1px solid var(--line); border-radius:12px; background:var(--bg)">
+              <div style="margin-top:12px; display:flex; gap:8px; align-items:center">
+                <button class="btn" type="submit">Subscribe</button>
+                <span id="newsStatus" class="muted" aria-live="polite"></span>
+              </div>
+              <p class="muted" style="margin-top:8px">No spam. Unsubscribe in one click.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="grid">
+        <div class="col-6">
+          <p><strong>Forever Floral Sisters</strong><br>Cardiff and nearby · Open Mon to Sat, 9 to 5<br><a href="mailto:hello@foreverfloralsisters.co.uk">hello@foreverfloralsisters.co.uk</a></p>
+        </div>
+        <div class="col-6 credits">
+          <details>
+            <summary>Photo credits</summary>
+            <ul id="creditsList" style="margin-top:8px; padding-left:20px">
+              <!-- Credits populate here. Replace with photographer and platform once photos are swapped. -->
+            </ul>
+            <p class="muted" style="margin-top:8px">The site is ready for embedded licensed photos. Replace placeholders with WebP Base64 assets and list photographers here for courtesy.</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Drawer Cart -->
+  <div id="overlay" class="overlay" tabindex="-1" aria-hidden="true"></div>
+  <aside id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle" class="drawer" aria-describedby="cartLines">
+    <header style="display:flex; align-items:center; justify-content:space-between; padding:12px 14px">
+      <h3 id="cartTitle">Basket</h3>
+      <button class="icon-btn" id="closeCartBtn" aria-label="Close basket">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6l-12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </header>
+    <div class="content">
+      <div id="cartLines" class="basket-live" aria-live="polite"></div>
+      <div id="lines"></div>
+    </div>
+    <div style="border-top:1px solid var(--line); padding:12px 14px">
+      <div style="display:flex; justify-content:space-between"><span>Subtotal</span><strong id="subtot">£0.00</strong></div>
+      <div style="display:flex; justify-content:space-between"><span>Delivery</span><strong id="ship">£0.00</strong></div>
+      <div style="display:flex; justify-content:space-between; margin-top:8px; font-size:18px"><span>Total</span><strong id="total">£0.00</strong></div>
+      <button class="btn" style="width:100%; margin-top:10px" id="checkoutBtn">Checkout demo</button>
+    </div>
+  </aside>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Florist",
+    "name":"Forever Floral Sisters",
+    "description":"Fresh bouquets, wedding florals, and corporate flowers. Same day delivery in Cardiff CF postcodes.",
+    "email":"hello@foreverfloralsisters.co.uk",
+    "address":{"@type":"PostalAddress","addressLocality":"Cardiff","addressRegion":"Cardiff"},
+    "areaServed":"Cardiff and nearby",
+    "openingHours":"Mo-Sa 09:00-17:00",
+    "image":[],
+    "sameAs":[]
+  }
+  </script>
+
+  <script>
+  // --- Image assets ---
+  // Note: This file runs offline with no network calls.
+  // Placeholders are inline SVG images used through <img> tags, so loading, decoding, and size attributes apply.
+  // Replace PLACEHOLDER with real WebP Base64 photos when available.
+  const PLACEHOLDER_SVG = encodeURIComponent(`
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+      <defs>
+        <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#ffe6ee"/>
+          <stop offset="1" stop-color="#fff8fb"/>
+        </linearGradient>
+      </defs>
+      <rect width="1200" height="900" fill="url(#g)"/>
+      <g transform="translate(600,450)">
+        <g fill="#C43D4D" opacity="0.9">
+          <circle r="160"/>
+          <circle r="140" cx="-160" cy="40" fill="#E85C6B"/>
+          <circle r="130" cx="160" cy="40" fill="#E85C6B"/>
+        </g>
+        <g fill="#2E7D32">
+          <ellipse rx="100" ry="40" cy="220"/>
+          <rect x="-12" y="60" width="24" height="180"/>
+        </g>
+      </g>
+      <text x="50" y="850" font-family="system-ui, sans-serif" font-size="24" fill="#66707b">Floral placeholder - swap with licensed WebP</text>
+    </svg>`);
+  const PH = `data:image/svg+xml;charset=UTF-8,${PLACEHOLDER_SVG}`;
+
+  // Hero and decorative images use placeholders to avoid network calls in this environment.
+  const HERO = { src: PH, alt: "Bouquet close up with soft bokeh" };
+  const DECOR = [
+    { src: PH, alt: "Soft focus flowers decorative image" },
+    { src: PH, alt: "Petals with natural light decorative image" },
+    { src: PH, alt: "Bridal bouquet detail decorative image" }
+  ];
+
+  // IMAGES mapping for product cards.
+  // Replace each src value with a Base64 WebP data URL under 250 KB per item, and update alt as accurate photo descriptions.
+  const IMAGES = {
+    "rose-delight": { src: PH, alt: "Close up of red or pink roses in a hand tied bouquet" },
+    "spring-bright": { src: PH, alt: "Mixed spring bouquet with bright colours" },
+    "wild-meadow": { src: PH, alt: "Pastel wildflowers styled loosely" },
+    "eucalyptus-jar": { src: PH, alt: "Eucalyptus stems in a clear jar" },
+    "sunny-day": { src: PH, alt: "Yellow bouquet with sunflowers or similar" },
+    "peony-charm": { src: PH, alt: "Pink peonies bouquet" },
+    "corporate-weekly": { src: PH, alt: "Neutral greens in a vase suitable for offices" },
+    "wedding-trial-bouquet": { src: PH, alt: "Elegant bridal trial bouquet" }
+  };
+
+  // Optional: credits for real photos once swapped in.
+  const CREDITS = [
+    // Example format to fill once images are replaced:
+    // {product:"Rose Delight", photographer:"Name", platform:"Unsplash", url:""},
+  ];
+
+  // --- Demo product data ---
+  // If you already have a previous PRODUCTS array, you can swap it in. IDs must match IMAGES keys above.
+  const PRODUCTS = [
+    { id:"rose-delight", name:"Rose Delight", price:39.00, desc:"Classic rose bouquet in red or pink." },
+    { id:"spring-bright", name:"Spring Bright", price:34.00, desc:"Mixed seasonal stems in bright tones." },
+    { id:"wild-meadow", name:"Wild Meadow", price:36.00, desc:"Pastel wildflower style, airy and soft." },
+    { id:"eucalyptus-jar", name:"Eucalyptus Jar", price:22.00, desc:"Fresh eucalyptus stems in a glass jar." },
+    { id:"sunny-day", name:"Sunny Day", price:35.00, desc:"Cheerful yellows, sunflowers when in season." },
+    { id:"peony-charm", name:"Peony Charm", price:44.00, desc:"Plush pink peonies, seasonal only." },
+    { id:"corporate-weekly", name:"Corporate Weekly", price:28.00, desc:"Neutral greens in vase, tidy and long lasting." },
+    { id:"wedding-trial-bouquet", name:"Wedding Trial Bouquet", price:55.00, desc:"Elegant trial bouquet to refine the look." }
+  ];
+
+  // --- Cart state ---
+  const CART_KEY = "ffs_cart_v1";
+  const state = {
+    cart: loadCart()
+  };
+
+  // --- Utilities ---
+  function money(n){ return "£" + n.toFixed(2) }
+  function saveCart(){ localStorage.setItem(CART_KEY, JSON.stringify(state.cart)); }
+  function loadCart(){ try{ return JSON.parse(localStorage.getItem(CART_KEY)) || [] }catch(e){ return [] } }
+  function addToCart(id, qty=1){
+    const p = PRODUCTS.find(x=>x.id===id); if(!p) return;
+    const line = state.cart.find(x=>x.id===id);
+    if(line){ line.qty += qty } else { state.cart.push({ id, name:p.name, price:p.price, qty }) }
+    saveCart(); renderCart(); announce("Added " + qty + " of " + p.name + " to basket");
+  }
+  function removeFromCart(id){
+    state.cart = state.cart.filter(x=>x.id!==id); saveCart(); renderCart(); announce("Removed item");
+  }
+  function setQty(id, qty){
+    const line = state.cart.find(x=>x.id===id); if(!line) return;
+    line.qty = Math.max(1, qty|0); saveCart(); renderCart();
+  }
+  function calcTotals(){
+    const subtotal = state.cart.reduce((s,x)=>s + x.price*x.qty, 0);
+    const shipping = state.cart.length === 0 ? 0 : (subtotal >= 60 ? 0 : 4.95);
+    return { subtotal, shipping, total: subtotal + shipping };
+  }
+  function announce(text){
+    const live = document.getElementById("cartLines");
+    live.textContent = text;
+    showToast(text);
+  }
+  function showToast(msg){
+    const t = document.getElementById("toast");
+    t.textContent = msg; t.classList.add("show");
+    clearTimeout(showToast._t); showToast._t = setTimeout(()=>t.classList.remove("show"), 1800);
+  }
+
+  // --- Render Shop ---
+  function renderShop(){
+    document.getElementById("heroImg").src = HERO.src;
+    document.getElementById("heroImg").alt = HERO.alt;
+
+    ["decor1","decor2","decor3"].forEach((id,i)=>{
+      const el = document.getElementById(id);
+      if(!el) return; el.src = DECOR[i].src; el.alt = DECOR[i].alt;
+    });
+
+    const grid = document.getElementById("shopGrid");
+    grid.innerHTML = "";
+    PRODUCTS.forEach(p=>{
+      const col = document.createElement("div");
+      col.className = "col-4";
+      const card = document.createElement("div");
+      card.className = "panel card";
+
+      const fig = document.createElement("div");
+      fig.className = "img-frame";
+
+      const img = document.createElement("img");
+      const asset = IMAGES[p.id];
+      img.src = asset && asset.src ? asset.src : PH;
+      img.alt = asset && asset.alt ? asset.alt : p.name;
+      img.loading = "lazy"; img.decoding = "async";
+      img.width = 800; img.height = 600; // prevents layout shift
+      img.style = "max-width:100%;height:auto;border-radius:12px";
+      fig.appendChild(img);
+
+      const title = document.createElement("div");
+      title.style = "font-weight:600";
+      title.textContent = p.name;
+
+      const desc = document.createElement("div");
+      desc.className = "muted";
+      desc.textContent = p.desc;
+
+      const price = document.createElement("div");
+      price.className = "price";
+      price.textContent = money(p.price);
+
+      const row = document.createElement("div");
+      row.className = "qty-row";
+
+      const lab = document.createElement("label");
+      lab.setAttribute("for", "q-"+p.id);
+      lab.textContent = "Qty";
+
+      const qty = document.createElement("input");
+      qty.className = "qty";
+      qty.id = "q-"+p.id;
+      qty.type = "number"; qty.min = "1"; qty.value = "1";
+      qty.inputMode = "numeric";
+
+      const btn = document.createElement("button");
+      btn.className = "btn";
+      btn.type = "button";
+      btn.textContent = "Add to basket";
+      btn.addEventListener("click", ()=> addToCart(p.id, parseInt(qty.value||"1",10)));
+
+      row.append(lab, qty, btn);
+      card.append(fig, title, desc, price, row);
+      col.appendChild(card);
+      grid.appendChild(col);
+    });
+  }
+
+  // --- Render Cart ---
+  function renderCart(){
+    const lines = document.getElementById("lines");
+    lines.innerHTML = "";
+    state.cart.forEach(x=>{
+      const row = document.createElement("div"); row.className = "line";
+      const left = document.createElement("div"); left.style="display:flex; flex-direction:column";
+      left.innerHTML = `<strong>${x.name}</strong><span class="muted">${money(x.price)} each</span>`;
+      const right = document.createElement("div"); right.style="display:flex; gap:8px; align-items:center";
+      const qty = document.createElement("input");
+      qty.type="number"; qty.min="1"; qty.value=String(x.qty); qty.className="qty";
+      qty.setAttribute("aria-label","Quantity for "+x.name);
+      qty.addEventListener("change", ()=> setQty(x.id, parseInt(qty.value||"1",10)));
+      const lineTotal = document.createElement("span"); lineTotal.textContent = money(x.price*x.qty);
+      const del = document.createElement("button"); del.className="icon-btn"; del.setAttribute("aria-label","Remove "+x.name);
+      del.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6l-12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
+      del.addEventListener("click", ()=> removeFromCart(x.id));
+      right.append(qty, lineTotal, del);
+      row.append(left, right);
+      lines.appendChild(row);
+    });
+    const t = calcTotals();
+    document.getElementById("subtot").textContent = money(t.subtotal);
+    document.getElementById("ship").textContent = money(t.shipping);
+    document.getElementById("total").textContent = money(t.total);
+  }
+
+  // --- Drawer controls ---
+  const overlay = document.getElementById("overlay");
+  const drawer = document.getElementById("cartDrawer");
+  const openCartBtn = document.getElementById("openCartBtn");
+  const closeCartBtn = document.getElementById("closeCartBtn");
+
+  function openDrawer(){
+    overlay.classList.add("show"); overlay.removeAttribute("aria-hidden");
+    drawer.classList.add("show");
+    drawer.focus();
+  }
+  function closeDrawer(){
+    overlay.classList.remove("show"); overlay.setAttribute("aria-hidden","true");
+    drawer.classList.remove("show");
+  }
+  openCartBtn.addEventListener("click", openDrawer);
+  closeCartBtn.addEventListener("click", closeDrawer);
+  overlay.addEventListener("click", closeDrawer);
+  window.addEventListener("keydown", (e)=>{ if(e.key==="Escape") closeDrawer() });
+
+  // --- Menu toggle ---
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  menuBtn.addEventListener("click", ()=>{
+    const open = mobileMenu.hasAttribute("hidden") ? false : true;
+    if(open){ mobileMenu.setAttribute("hidden",""); menuBtn.setAttribute("aria-expanded","false"); }
+    else { mobileMenu.removeAttribute("hidden"); menuBtn.setAttribute("aria-expanded","true"); }
+  });
+
+  // --- Postcode helper ---
+  const pc = document.getElementById("pc");
+  const pcMsg = document.getElementById("pcMsg");
+  pc.addEventListener("input", ()=>{
+    const v = (pc.value || "").trim().toUpperCase();
+    if(/^CF/.test(v)){
+      pcMsg.textContent = "Same day delivery available in CF postcodes for orders before 12:00.";
+    }else if(v.length === 0){
+      pcMsg.textContent = "";
+    }else{
+      pcMsg.textContent = "We deliver Cardiff and nearby. Next day delivery is likely. Contact us for timing.";
+    }
+  });
+
+  // --- Forms (no network calls) ---
+  document.getElementById("contactForm").addEventListener("submit", (e)=>{
+    e.preventDefault();
+    const s = document.getElementById("contactStatus");
+    s.textContent = "Message sent. We will reply within business hours.";
+    e.target.reset();
+    showToast("Thanks for getting in touch");
+  });
+  document.getElementById("newsForm").addEventListener("submit", (e)=>{
+    e.preventDefault();
+    const s = document.getElementById("newsStatus");
+    s.textContent = "Subscribed. A welcome note is in your inbox.";
+    e.target.reset();
+    showToast("Subscribed to newsletter");
+  });
+
+  // --- Credits list render ---
+  function renderCredits(){
+    const ul = document.getElementById("creditsList");
+    ul.innerHTML = "";
+    if(CREDITS.length === 0){
+      const li = document.createElement("li");
+      li.textContent = "Replace placeholders with licensed WebP photos and add photographer plus platform credits here.";
+      ul.appendChild(li);
+    }else{
+      CREDITS.forEach(c=>{
+        const li = document.createElement("li");
+        li.textContent = `${c.product} — ${c.photographer} on ${c.platform}`; // note: en dash avoided, simple hyphen is used by string interpolation
+        ul.appendChild(li);
+      });
+    }
+  }
+
+  // --- Checkout demo ---
+  document.getElementById("checkoutBtn").addEventListener("click", ()=>{
+    const t = calcTotals();
+    showToast("Order total " + money(t.total) + " including delivery. Demo only.");
+  });
+
+  // --- Init ---
+  renderShop();
+  renderCart();
+  renderCredits();
+
+  // Assign any image elements missed above
+  // Already set hero and decor in renderShop. Ensure style attribute for responsiveness:
+  Array.from(document.querySelectorAll("img")).forEach(img=>{
+    if(!img.style || !String(img.style).includes("max-width")) img.style = "max-width:100%;height:auto;border-radius:12px";
+  });
+
+  // Safety: prevent console errors due to undefined
+  console.debug && console.debug("Forever Floral Sisters offline build ready");
+  </script>
+</body>
+</html>
