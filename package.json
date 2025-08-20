@@ -1,0 +1,23 @@
+{
+  "name": "floral-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@axe-core/cli": "^4.10.2",
+    "eslint": "^9.33.0",
+    "html-validate": "^10.0.0",
+    "http-server": "^14.1.1",
+    "lighthouse": "^12.8.1",
+    "playwright": "^1.55.0",
+    "sharp": "^0.34.3",
+    "vnu-jar": "^24.10.17"
+  }
+}
